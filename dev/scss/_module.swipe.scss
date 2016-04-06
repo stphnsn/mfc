@@ -1,0 +1,124 @@
+//  ## CAROUSEL  --------------------------------------------------------------------*/
+
+.swipe {
+    overflow: hidden;
+    position: relative;
+}
+
+.swipe-wrap {
+    overflow: hidden;
+    position: relative;
+}
+
+.swipe-wrap > figure {
+    float: left;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+.swipe figure img {
+    float: left;
+}
+
+.swipe-nav ul {
+    line-height: 6px;
+    margin-bottom: 15px;
+    padding: 10px 0 0;
+    text-align: center;
+    width: 100%;
+}
+
+.swipe-nav li {
+    background-color: #999;
+    border-radius: 6px;
+    display: inline-block;
+    height: 6px;
+    line-height: 6px;
+    list-style: none;
+    margin: 0 3px;
+    overflow: hidden;
+    padding: 0;
+    text-indent: -100%;
+    width: 6px;
+}
+
+.swipe-nav li.selected {
+    background-color: #333;
+}
+
+.touch .swipe .btn {
+    display: none;
+}
+
+.swipe .btn {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -100%;
+    top: 0;
+    width: 40%;
+    z-index: 5;
+}
+
+.swipe .btn:hover,
+.swipe .btn:active,
+.swipe .btn:focus {
+    background-color: transparent;
+}
+
+.swipe .btn-next {
+    left: auto;
+    right: 0;
+}
+
+.swipe .btn:after {
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    content: '';
+    display: block;
+    height: 15px;
+    margin-top: -7px;
+    left: 15px;
+    position: absolute;
+    text-indent: -100%;
+    top: 50%;
+    transform: rotate(45deg);
+    width: 15px;
+}
+
+.swipe .btn-next:after {
+    left: auto;
+    right: 15px;
+    transform: rotate(225deg);
+}
+
+
+//  ## MODULE MEDIA QUERIES  --------------------------------------------------------*/
+
+@media screen and (min-width: $breakpoint-medium) {
+
+
+}
+
+@media screen and (min-width: $breakpoint-large) {
+
+    .swipe {
+        margin: 0 auto 10px;
+    }
+
+    .swipe-nav ul {
+        margin-bottom: 25px;
+    }
+
+    .swipe-nav li {
+        border-radius: 10px;
+        height: 8px;
+        line-height: 8px;
+        margin: 0 5px;
+        width: 8px;
+    }
+
+
+}

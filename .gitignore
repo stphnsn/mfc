@@ -1,0 +1,10 @@
+.DS_Store
+Desktop.ini
+Thumbs.db
+.sass-cache
+dist
+node_modules
+npm-debug.log
+node_modules
+*.sublime-workspace
+docs/secret.txt

@@ -1,0 +1,63 @@
+.intro {
+    padding: 0 15px 10px;
+    text-align: left;
+}
+
+.intro h1 {
+    @extend %serif;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 50px;
+    margin: 10px 0 0;
+}
+
+.intro p {
+    @extend %serif;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+
+//  ## MODULE MEDIA QUERIES  --------------------------------------------------------*/
+
+@media screen and (min-width: $breakpoint-small) {
+
+    .intro {
+        padding: 0 0 10px;
+    }
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+
+    .intro h1 {
+        font-size: 35px;
+        line-height: 50px;
+        margin: 10px 0 5px;
+    }
+
+    .intro p {
+        font-size: 23px;
+        line-height: 30px;
+        margin: 0 0 30px;
+    }
+}
+
+@media screen and (min-width: $breakpoint-large) {
+
+    .intro {
+        width: $container-large;
+    }
+
+    .intro h1 {
+        font-size: 45px;
+        line-height: 50px;
+        margin: 50px 0 20px;
+    }
+
+    .intro p {
+        font-family: "EB Garamond", Georgia, sans-serif;
+        font-size: 28px;
+        line-height: 40px;
+        margin: 0 0 50px;
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "folders":
+    [
+        {
+            "path": "./",
+            "name": "MFC",
+            "file_exclude_patterns":
+            [
+                "*.sublime-project",
+                "*.sublime-workspace"
+            ],
+            "folder_exclude_patterns":
+            [
+                "node_modules",
+                "dist",
+                ".sass-cache"
+            ]
+        }
+    ],
+    "settings":
+    {
+        "detect_indentation": true,
+        "tab_size": 4,
+        "translate_tabs_to_spaces": true,
+        "use_tab_stops": true
+    }
+}

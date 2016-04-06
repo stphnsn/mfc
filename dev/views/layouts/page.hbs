@@ -1,0 +1,31 @@
+{{>top}}
+
+    <title>{{title}}</title>
+
+    <meta name="description" content="{{description}}">
+    <meta name="url" content="{{keywords}}">
+
+{{>top-assets}}
+</head>
+<body>
+
+    <div class="container">
+
+{{>header}}
+
+        <main class="main" data-page="{{pageId}}">
+
+            <div class="content" id="content">
+
+{{{body}}}
+            </div>
+
+        </main>
+
+{{>footer}}
+
+{{>menu}}
+
+    </div>
+
+{{>bottom}}

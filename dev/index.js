@@ -59,17 +59,19 @@ app.get('/the-cottage', function (request, response) {
     var dt = new Date();
     dataProvider.findByCottageAndStart('the_cottage', 20150402, callback);
     function callback(bookings) {
-        var bookingsObj = {};
-        for (var i = 0; i < bookings.length; i++) {
-            var startStr = '' + bookings[i].start;
-            bookingsObj[startStr] = bookings[i];
-        }
         var data = {
             'title': 'The Cottage | Manor Farm Cottages, Goodmanham',
-            'description': 'East Yorkshire self catering holiday cottages',
-            'layout': 'cottage',
-            'calendar': calendar.calendar(dt, 'the_cottage', bookingsObj)
+            'description': 'East Yorkshire self catering holiday cotages',
+            'layout': 'cottage'
         };
+        if (bookings && bookings.length > 0) {
+            var bookingsObj = {};
+            for (var i = 0; i < bookings.length; i++) {
+                var startStr = '' + bookings[i].start;
+                bookingsObj[startStr] = bookings[i];
+            }
+            data.calendar = calendar.calendar(dt, 'the_cottage', bookingsObj);
+        }
         response.status(200).set(htmlHeaders).render('the-cottage', data);
     }
 });
@@ -79,17 +81,19 @@ app.get('/the-stables', function (request, response) {
     var dt = new Date();
     dataProvider.findByCottageAndStart('the_stables', 20150402, callback);
     function callback(bookings) {
-        var bookingsObj = {};
-        for (var i = 0; i < bookings.length; i++) {
-            var startStr = '' + bookings[i].start;
-            bookingsObj[startStr] = bookings[i];
-        }
         var data = {
             'title': 'The Stables | Manor Farm Cottages, Goodmanham',
             'description': 'East Yorkshire self catering holiday cotages',
-            'layout': 'cottage',
-            'calendar': calendar.calendar(dt, 'the_stables', bookingsObj)
+            'layout': 'cottage'
         };
+        if (bookings && bookings.length > 0) {
+            var bookingsObj = {};
+            for (var i = 0; i < bookings.length; i++) {
+                var startStr = '' + bookings[i].start;
+                bookingsObj[startStr] = bookings[i];
+            }
+            data.calendar = calendar.calendar(dt, 'the_stables', bookingsObj);
+        }
         response.status(200).set(htmlHeaders).render('the-stables', data);
     }
 });

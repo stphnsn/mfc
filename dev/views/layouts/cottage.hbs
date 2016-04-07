@@ -11,17 +11,49 @@
 
     <div class="container">
 
+{{>header}}
+
         <main class="main" data-page="{{pageId}}">
 
             <div class="content" id="content">
 
 {{{body}}}
 
+{{#if calendar}}
+
+            <section class="calendar">
+                <h2>Booking your stay</h2>
+                <p>To make your booking check the availability calendar below and ring Liz on <a href="tel:+441430873510">+44 1430 873510</a> or <a href="mailto:info@manorfarm-cottages.co.uk">email us</a> with your questions.</p>
+                <p>Bookings start and end on a Saturday and the price displayed is for 7 nights. Shorter stays (min 3 nights) may be available November to March. Unfortunately we are unable to accommodate pets.</p>
+
+                <div class="key">
+                    <p class="available"><span></span>Available</p>
+                    <p class="unavailable"><span></span>Unavailable</p>
+                </div>
+
+                <div id="calendar">
 {{{calendar}}}
+                </div>
+
+            </section>
+
+{{else}}
+
+            <section class="calendar">
+                <h2>Booking your stay</h2>
+                <p>To make your booking check the availability calendar below and ring Liz on <a href="tel:+441430873510">+44 1430 873510</a> or <a href="mailto:info@manorfarm-cottages.co.uk">email us</a> with your questions.</p>
+                <p>Bookings start and end on a Saturday and the price displayed is for 7 nights. Shorter stays (min 3 nights) may be available November to March. Unfortunately we are unable to accommodate pets.</p>
+            </section>
+
+{{/if}}
 
             </div>
 
         </main>
+
+{{>footer}}
+
+{{>menu}}
 
     </div>
 

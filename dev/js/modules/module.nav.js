@@ -24,11 +24,7 @@ rps.mfc.Nav = (function () {
     },
 
     openCloseNav = function () {
-        $('.no-touch body').on('click', '#showNav', function (e) {
-            e.preventDefault();
-            $body.toggleClass('show-menu');
-        });
-        $('.touch body').on('touchstart', '#showNav', function (e) {
+        $('body').on('click', '#showNav', function (e) {
             e.preventDefault();
             $body.toggleClass('show-menu');
         });

@@ -83,6 +83,18 @@ module.exports = function (grunt) {
             images: {
                 files: ['<%= paths.dev %>/images/**/*'],
                 tasks: ['images']
+            },
+            app: {
+                files: ['<%= paths.dev %>/index.js'],
+                tasks: ['app']
+            },
+            modules: {
+                files: ['<%= paths.dev %>/modules/**/*'],
+                tasks: ['modules']
+            },
+            views: {
+                files: ['<%= paths.dev %>/views/**/*'],
+                tasks: ['views']
             }
         },
 
